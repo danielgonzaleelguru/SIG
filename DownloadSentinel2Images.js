@@ -36,6 +36,7 @@ Map.centerObject (ImagenSentinel, 9);
 var projection = ImagenSentinel.select(banda).projection().getInfo();
 
 print(projection);
+//print images projection data.
 
 Export.image.toDrive({
   image: ImagenSentinel.select(banda),
@@ -44,7 +45,7 @@ Export.image.toDrive({
   description: banda,
  /* crs: projection.crs,
   crsTransform: projection.transform,*/
-  maxPixels: 3784216672400,
+  maxPixels: 3784216672400, //max pixel size with best resolution.
   formatOptions: {
     cloudOptimized: true
   }
